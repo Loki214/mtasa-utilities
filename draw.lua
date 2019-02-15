@@ -1,6 +1,6 @@
 return function(sw, sh)
 	-- local dx = {}
-
+	local sw, sh = sw, sh
 	local cw, ch = guiGetScreenSize()
 
 	function getMouse(relative)
@@ -27,6 +27,10 @@ return function(sw, sh)
 		if draw and type(draw) == "function" then
 			draw()
 		end
+	end)
+	
+	addEventHandler("onClientRender", root, function()
+		cx,cy = getCursorPosition(  )
 	end)
 
 	function browser(...)
